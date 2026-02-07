@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "id": "gammamod",
+  "version": "1.0.0",
+  "name": "Gamma Mod",
+  "description": "GUI для изменения gamma 0%-500%",
+  "authors": ["Ты"],
+  "contact": {},
+  "license": "MIT",
+  "environment": "*",
+  "entrypoints": {
+    "client": ["com.example.gammamod.MainMod"]
+  },
+  "depends": {
+    "fabricloader": ">=1.21.4",
+    "fabric": "*"
+  }
+}

@@ -1,0 +1,35 @@
+buildscript {
+    repositories {
+        maven { url = 'https://maven.fabricmc.net/' }
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'net.fabricmc:fabric-loom:1.2.8'
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'fabric-loom'
+
+group = 'com.example'
+version = '1.0.0'
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
+}
+
+repositories {
+    mavenCentral()
+    maven { url = 'https://maven.fabricmc.net/' }
+}
+
+dependencies {
+    minecraft "com.mojang:minecraft:1.21.4"
+    mappings "net.fabricmc:yarn:1.21.4+build.1:v2"
+    modImplementation "net.fabricmc:fabric-loader:1.21.4"
+    modImplementation "net.fabricmc.fabric-api:fabric-api:1.21.4+build.1"
+}
+
+// ✅ Убираем runClient, Loom сам создаёт её
